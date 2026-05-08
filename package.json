@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "type": "module",
   "scripts": {
-    "preversion": "node tools/bump-version.cjs",
+    "version": "node tools/bump-version.cjs && git add README.md README_EN.md DOCS/",
     "postversion": "git push && git push --tags",
     "build:pkg": "npm run build && tsc -p tsconfig.pkg.json && pkg build/server.js --targets node18-win-x64 --output min-markers.exe",
     "dev": "tsx server.ts",
