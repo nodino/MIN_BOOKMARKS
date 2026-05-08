@@ -10,6 +10,7 @@ jobs:
     runs-on: windows-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      npm_config_build_from_source: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,11 +22,12 @@ jobs:
         with:
           node-version: 18
           cache: npm
-      - name: Clean and install dependencies
-        run: |
-          if (Test-Path node_modules) { Remove-Item -Recurse -Force node_modules }
-          if (Test-Path package-lock.json) { Remove-Item -Force package-lock.json }
-          npm install
+       - name: Clean and install dependencies
+         run: |
+           if (Test-Path node_modules) { Remove-Item -Recurse -Force node_modules }
+           if (Test-Path package-lock.json) { Remove-Item -Force package-lock.json }
+           npm install
+           npm rebuild
 
       - name: Build executable
         run: npm run build:pkg
