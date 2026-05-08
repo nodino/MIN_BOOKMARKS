@@ -123,7 +123,7 @@ Find the IP of the machine running MIN MARKERS (e.g. `172.31.20.208`), then add 
 
 Download and import this configuration file in your Bitfocus companion
 
-DOCS\exemple_config_http_companion.companionconfig
+(see `DOCS/exemple_config_http_companion.companionconfig')
 
 
 
