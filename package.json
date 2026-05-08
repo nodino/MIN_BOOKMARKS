@@ -6,7 +6,7 @@
   "scripts": {
     "preversion": "node tools/bump-version.js",
     "postversion": "git push && git push --tags",
-    "build:pkg": "npm run build && tsc -p tsconfig.pkg.json && pkg build/server.js --targets node18-win-x64 --output min-markers.exe",
+    "build:pkg": "npm run build && tsc -p tsconfig.pkg.json && pkg build/server.js --targets node18-win-x64 --output min-markers.exe --no-bytecode",
     "dev": "tsx server.ts",
     "build": "npx vite build",
     "preview": "vite preview",
