@@ -179,8 +179,9 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    // In a pkg binary, use the directory of the exe; otherwise use cwd.
-    const baseDir = (process as any).pkg ? path.dirname(process.execPath) : process.cwd();
+    // In a pkg binary, __dirname points to the virtual snapshot directory (e.g., /snapshot/project/dist-server)
+    // So we need to go up one level to reach the bundled 'dist' folder.
+    const baseDir = (process as any).pkg ? path.join(__dirname, "..") : process.cwd();
     const distPath = path.join(baseDir, "dist");
     app.use(express.static(distPath));
     app.get("*", (req, res) => {
