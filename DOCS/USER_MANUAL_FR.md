@@ -1,6 +1,6 @@
 # MIN MARKERS - Manuel Utilisateur
 
-Version : **1.0.7**
+Version : **1.0.8**
 
 _Consultez la **Documentation Technique** et les fichiers template: `DOCS/TECHNICAL_DOCUMENTATION_FR.md`._
 
