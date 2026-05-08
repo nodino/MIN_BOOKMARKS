@@ -1,6 +1,6 @@
 # MIN MARKERS - Technical Documentation
 
-Version: **1.0.0**
+Version: **1.0.2**
 
 ## Executive Summary
 
