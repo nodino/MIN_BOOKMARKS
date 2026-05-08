@@ -3,10 +3,11 @@
   "private": true,
   "version": "1.0.10",
   "type": "module",
+  "bin": "build/server.js",
   "scripts": {
     "version": "node tools/bump-version.cjs && git add README.md DOCS/",
     "postversion": "git push origin HEAD --follow-tags",
-    "build:pkg": "npm run build && tsc -p tsconfig.pkg.json && pkg build/server.js --targets node18-win-x64 --output min-markers.exe",
+    "build:pkg": "npm run build && tsc -p tsconfig.pkg.json && pkg package.json --output min-markers.exe",
     "dev": "tsx server.ts",
     "build": "npx vite build",
     "preview": "vite preview",
