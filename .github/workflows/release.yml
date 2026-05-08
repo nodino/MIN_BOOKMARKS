@@ -26,9 +26,17 @@ jobs:
       - name: Build executable
         run: npm run build:pkg
 
+      - name: Package executable and assets
+        run: |
+          if (Test-Path dist) {
+            Compress-Archive -Path min-markers.exe, dist -DestinationPath min-markers.zip -Force
+          } else {
+            Write-Host "dist folder not found, packaging only exe"
+            Compress-Archive -Path min-markers.exe -DestinationPath min-markers.zip -Force
+          }
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
-          files: min-markers.exe
+          files: min-markers.zip
