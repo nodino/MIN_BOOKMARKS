@@ -1,6 +1,6 @@
 # MIN MARKERS - User Manual
 
-Version: **1.0.4**
+Version: **1.0.7**
 
 _For detailed architecture, design decisions, and component internals, see the **Technical Documentation**: `DOCS/TECHNICAL_DOCUMENTATION_EN.md`._
 
