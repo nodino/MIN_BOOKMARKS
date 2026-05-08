@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xmeml>
+<xmeml version="4">
+  <!-- Sequence definition -->
+  <sequence id="seq-001"
+            TL.SQAudioVisibleBase="0"
+            TL.SQVideoVisibleBase="0"
+            TL.SQVisibleBaseTime="0">
+    <uuid>00000000-0000-0000-0000-000000000000</uuid>
+
+    <!-- Basic sequence information -->
+    <duration>81</duration>                 <!-- total frames of the sequence -->
+    <rate>
+      <timebase>30</timebase>        <!-- e.g. 25, 30, 50 -->
+      <ntsc>FALSE</ntsc>
+    </rate>
+    <name>Marker Session 07/05/2026</name>
+
+    <!-- Minimal media block – required by Premiere even if empty -->
+    <media>
+      <video>
+        <format>
+          <samplecharacteristics>
+            <rate>
+              <timebase>30</timebase>
+              <ntsc>FALSE</ntsc>
+            </rate>
+            <width>1920</width>                     <!-- e.g. 1920 -->
+            <height>1080</height>                  <!-- e.g. 1080 -->
+            <pixelaspectratio>square</pixelaspectratio>
+          </samplecharacteristics>
+        </format>
+      </video>
+      <audio>
+        <format>
+          <samplecharacteristics>
+            <depth>16</depth>
+            <samplerate>48000</samplerate>
+          </samplecharacteristics>
+        </format>
+      </audio>
+    </media>
+
+    <!-- MARKERS ---------------------------------------------------------- -->
+    <!-- Use frame numbers for <in> and <out>.  -1 means “no out point”. -->
+    <!-- Optional <pproColor> can be any 32‑bit unsigned int (RGB+alpha). -->
+    <marker>
+      <comment></comment>
+      <name>TEST</name>
+      <in>637</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4280578025</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <marker>
+      <comment></comment>
+      <name>HIGHLIGHT</name>
+      <in>521</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4281740498</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <marker>
+      <comment></comment>
+      <name>END</name>
+      <in>398</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4294741314</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <marker>
+      <comment></comment>
+      <name>START</name>
+      <in>368</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4294967295</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <marker>
+      <comment></comment>
+      <name>INTERVIEW</name>
+      <in>349</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4278190080</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <marker>
+      <comment></comment>
+      <name>AUDIO FIX</name>
+      <in>249</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4286611584</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <marker>
+      <comment></comment>
+      <name>RE-TAKE</name>
+      <in>166</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4286611712</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <marker>
+      <comment></comment>
+      <name>ALARM</name>
+      <in>147</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4286771328</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <marker>
+      <comment></comment>
+      <name>END</name>
+      <in>81</in>
+      <out>-1</out>        <!-- use -1 if you only need an in‑point -->
+      <pproColor>4280578025</pproColor>   <!-- e.g. 4280578025 -->
+    </marker>
+    <!-- --------------------------------------------------------------- -->
+
+    <!-- Timecode display (optional but useful) -->
+    <timecode>
+      <rate>
+        <timebase>30</timebase>
+        <ntsc>FALSE</ntsc>
+      </rate>
+      <string>00:00:00:00</string>
+      <frame>0</frame>
+      <displayformat>NDF</displayformat>
+    </timecode>
+  </sequence>
+</xmeml>

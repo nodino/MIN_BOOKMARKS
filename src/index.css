@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-tc: "Courier New", Courier, monospace;
+  
+  --color-accent: #ff4e00;
+  --color-panel: #15161a;
+  --color-border: #2a2c33;
+  --color-bg-dark: #0a0a0c;
+  --color-text-dim: #6e717d;
+}
+
+body {
+  @apply bg-bg-dark text-[#e0e0e6] font-sans antialiased overflow-hidden h-screen;
+}
+
+/* Custom timecode font for the big display */
+.timecode-digits {
+  font-family: var(--font-tc);
+  letter-spacing: 0.1em;
+}
+
+/* Custom timecode glow */
+.tc-glow {
+  text-shadow: 0 0 30px rgba(224, 224, 230, 0.25);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+.marker-grid-btn {
+  @apply flex flex-col items-center justify-center p-4 rounded-md border border-border bg-panel transition-all hover:bg-white/5 active:bg-accent active:border-accent;
+}
+

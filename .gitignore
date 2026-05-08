@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+.kilo/skills/docs-architect/SKILL.md
+.kilo/skills/docs-architect/SKILL_EN.md
+
+# Ignore generated binary
+min-markers.exe
