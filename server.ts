@@ -172,7 +172,9 @@ async function startServer() {
   // Static / Vite middleware
   // ---------------------------------------------------------------------------
   if (process.env.NODE_ENV !== "production") {
-    const { createServer: createViteServer } = await import("vite");
+    // Hide the string from `pkg` static analysis by using a variable
+    const viteModuleName = "vi" + "te";
+    const { createServer: createViteServer } = await import(viteModuleName);
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
