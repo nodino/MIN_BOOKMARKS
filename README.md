@@ -10,6 +10,8 @@ MIN MARKERS enables live production operators to capture and manage timecoded ev
 
 ## Documentation Overview
 
+- **Documentation** – explore the [DOCS folder](./DOCS) for detailed guides.
+
 The following sections provide a comprehensive guide to the system architecture, design decisions, core components, deployment, and integration points. They are organized to serve multiple audiences:
 - **Stakeholders & Architects**: High‑level overview and rationale.
 - **Developers**: Detailed component descriptions, code examples, and contribution guidelines.
@@ -121,7 +123,7 @@ Find the IP of the machine running MIN MARKERS (e.g. `172.31.20.208`), then add 
 
 Download and import this configuration file in your Bitfocus companion
 
-![alt text](DOCS\exemple_config_http_companion.companionconfig)
+DOCS\exemple_config_http_companion.companionconfig
 
 
 
