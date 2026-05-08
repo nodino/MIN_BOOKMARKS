@@ -21,8 +21,14 @@ const replaceVersion = (content) =>
 
 files.forEach((rel) => {
   const abs = path.resolve(__dirname, '..', rel);
+  if (!fs.existsSync(abs)) {
+    console.warn(`⚠️  ${rel} not found, skipping`);
+    return;
+  }
   let txt = fs.readFileSync(abs, 'utf8');
   txt = replaceVersion(txt);
   fs.writeFileSync(abs, txt, 'utf8');
   console.log(`✓ Updated ${rel} → ${newVersion}`);
 });
+  // End of loop
+}
