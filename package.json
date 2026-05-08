@@ -1,7 +1,7 @@
 {
   "name": "react-example",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "preversion": "node tools/bump-version.cjs",
@@ -29,8 +29,12 @@
     "xml2js": "^0.6.2"
   },
   "pkg": {
-    "assets": ["dist/**"],
-    "targets": ["node18-win-x64"],
+    "assets": [
+      "dist/**"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
     "outputPath": "."
   },
   "devDependencies": {
