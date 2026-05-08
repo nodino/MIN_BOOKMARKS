@@ -1,6 +1,6 @@
 # MIN MARKERS (Bookmarks)
 
-Version: **1.0.3**
+Version: **1.0.4**
 
 MIN MARKERS is a lightweight local web application designed to create, manage and record bookmarks/markers for live production workflows. The goal of the app is to provide a simple, fast interface to log important moments, control timecode (Free Run), and integrate with automation tools so operators can quickly mark and recall events during live shows.
 
