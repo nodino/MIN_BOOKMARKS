@@ -30,5 +30,4 @@ files.forEach((rel) => {
   fs.writeFileSync(abs, txt, 'utf8');
   console.log(`✓ Updated ${rel} → ${newVersion}`);
 });
-  // End of loop
-}
+
