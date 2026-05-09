@@ -9,5 +9,19 @@ coverage/
 .kilo/skills/docs-architect/SKILL.md
 .kilo/skills/docs-architect/SKILL_EN.md
 
+# TypeScript cache
+*.tsbuildinfo
+
+# Vite SSR
+dist-ssr/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Local tool dependencies
+.kilo/node_modules/
+
+
 # Ignore generated binary
 min-markers.exe
