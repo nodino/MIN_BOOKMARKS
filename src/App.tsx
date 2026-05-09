@@ -96,7 +96,8 @@ export default function App() {
   const shutdownServer = async () => {
     setIsShuttingDown(true);
     try {
-      await fetch('/api/shutdown', { method: 'POST' });
+      const basePath = import.meta.env.BASE_URL || '/';
+      await fetch(`${basePath}api/shutdown`, { method: 'POST' });
     } catch (_) { /* server closed before responding, that's fine */ }
     setTimeout(() => {
       setIsShuttingDown(false);
@@ -155,7 +156,8 @@ export default function App() {
     let retryTimeout: NodeJS.Timeout;
 
     const connect = () => {
-      const es = new EventSource('/api/events');
+      const basePath = import.meta.env.BASE_URL || '/';
+      const es = new EventSource(`${basePath}api/events`);
       companionSseRef.current = es;
 
       es.onopen = () => {
