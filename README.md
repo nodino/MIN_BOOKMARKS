@@ -1,6 +1,6 @@
 # MIN MARKERS (Bookmarks)
 
-Version: **1.0.12**
+Version: **1.0.13**
 
 MIN MARKERS is a lightweight local web application designed to create, manage and record bookmarks/markers for live production workflows. The goal of the app is to provide a simple, fast interface to [...]
 
