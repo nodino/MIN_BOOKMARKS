@@ -7,7 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: '/MIN_BOOKMARKS/',
+    base: './',
     plugins: [
       react(),
       tailwindcss(),
