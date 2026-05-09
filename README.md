@@ -2,11 +2,11 @@
 
 Version: **1.0.13**
 
-MIN MARKERS is a lightweight local web application designed to create, manage and record bookmarks/markers for live production workflows. The goal of the app is to provide a simple, fast interface to [...]
+MIN MARKERS is a lightweight local web application designed to create, manage and record bookmarks/markers for live production workflows. The goal of the app is to provide a simple, fast interface [...]
 
 ## Executive Summary
 
-MIN MARKERS enables live production operators to capture and manage timecoded events in a web-based UI. It supports free‑run timecode, manual marker entry, and remote control via Bitfocus Companion.[...]
+MIN MARKERS enables live production operators to capture and manage timecoded events in a web-based UI. It supports free‑run timecode, manual marker entry, and remote control via Bitfocus Companion [...]
 
 ## Documentation Overview
 
@@ -22,7 +22,7 @@ The following sections provide a comprehensive guide to the system architecture,
 
 ## Architecture Overview
 
-A high‑level view of the system is captured in the **Technical Documentation** (see `DOCS/TECHNICAL_DOCUMENTATION_EN.md`). It outlines the front‑end built with React 18 + Vite, the lightweig[...]
+A high‑level view of the system is captured in the **Technical Documentation** (see `DOCS/TECHNICAL_DOCUMENTATION_EN.md`). It outlines the front‑end built with React 18 + Vite, the lightweig[...].
 
 ## Further Documentation
 
@@ -132,6 +132,44 @@ The application can be packaged as a single binary that runs on any Windows comp
 
 ---
 
+## Progressive Web App (PWA) — Smartphone install
+
+As of version 1.0.13 MIN MARKERS is also a Progressive Web App (PWA). This lets you install the app on Android and iOS smartphones so it behaves like a native app (home‑screen icon, standalone window, faster startup).
+
+What a PWA provides
+- Installable on smartphones and tablets.
+- Runs in "standalone" mode (no browser chrome) once installed.
+- Offline-capable UI for previously loaded pages (limited by service worker caching).
+- Faster launch and a native-like user experience.
+
+How to use the PWA with MIN MARKERS
+1. Make the server reachable from your phone:
+   - If running locally on a computer, find its IP on the local network (e.g. `192.168.1.42`) and ensure the machine and phone are on the same Wi‑Fi.
+   - Open port 3000 in the firewall if necessary (see Firewall section above).
+2. Open the app URL on your phone's browser:
+   - `http://<machine-ip>:3000`
+   - Note: `localhost` on the phone refers to the phone itself — use the machine IP.
+
+Install on Android (Chrome, Edge, other Chromium browsers)
+- When you open the app in Chrome, you may see an "Install" prompt in the address bar or a browser menu option.
+- Alternatively: Menu (⋮) → "Add to Home screen" → follow prompts.
+- The installed app will appear on your home screen and open in standalone mode.
+
+Install on iOS (Safari)
+- iOS has limited PWA features but supports Add to Home Screen:
+  1. Open the app URL in Safari.
+  2. Tap the Share button (the square with an arrow).
+  3. Select "Add to Home Screen" and confirm.
+- Note: On iOS the PWA runs in a standalone webview but some APIs (background sync, push) are restricted.
+
+Notes and troubleshooting
+- Localhost is treated as a secure context by most browsers, so the PWA can be installed from `http://localhost:3000` when running on the same device. For installing from a different device use the machine IP as above.
+- If you don't see the install prompt on Android, use the browser menu's "Add to Home screen".
+- On iOS the prompt is manual (Share → Add to Home Screen); there is no automatic install banner.
+- If the icon or standalone behavior does not appear, clear the browser cache or unregister service workers in browser settings and reload the page.
+
+---
+
 ## Bitfocus Companion Integration
 
 MIN MARKERS can receive **Rec Start / Rec Stop** commands from [Bitfocus Companion](https://bitfocus.io/companion) running on any machine on the same network.  
@@ -168,7 +206,7 @@ Download and import this configuration file in your Bitfocus companion
 
 ### Firewall (Windows)
 
-**Server shutdown**: When the application runs as a packaged Windows executable, a **Shutdown** button appears in the UI (top‑right corner). Clicking it opens a confirmation modal; confirming sends [...]
+**Server shutdown**: When the application runs as a packaged Windows executable, a **Shutdown** button appears in the UI (top‑right corner). Clicking it opens a confirmation modal; confirming s[...]
 
 
 If Companion cannot reach the server, open port 3000:
